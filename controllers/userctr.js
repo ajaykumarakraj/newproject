@@ -5,4 +5,11 @@ const getuser = (req, res) => {
   });
 };
 
-module.exports = { getuser };
+const adduser = (req, res) => {
+  const { inputdata } = req.body;
+  res.json({
+    success: true,
+    message: `welcom to ${inputdata}`,
+  });
+};
+module.exports = { getuser, adduser };
