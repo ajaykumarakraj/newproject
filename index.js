@@ -2,6 +2,10 @@
 const express = require("express");
 var bodyParser = require("body-parser");
 const { route } = require("./routes/userrout");
+const connectDB = require("./config/db");
+
+// mongo db funn call
+connectDB();
 // obj
 const app = express();
 // view template engine
