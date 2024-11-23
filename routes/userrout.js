@@ -5,7 +5,7 @@ const { getuser, adduser, createUser } = require("../controllers/userctr");
 const router = express.Router();
 
 // create ne user
-router.post("./create-user", createUser);
+router.post("/create-user", createUser);
 //routes  get user //get method
 router.get("/", getuser);
 
