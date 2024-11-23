@@ -26,11 +26,28 @@ const createUser = async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(`error in create vuser ${error}`);
+    console.log(`error in create user ${error}`);
     res.status(400).json({
       message: false,
       error,
     });
   }
 };
-module.exports = { getuser, adduser, createUser };
+//get all users
+
+const getAlluser = async (req, res) => {
+  try {
+    const users = await UserModel.find({});
+    res.status(200).json({
+      success: true,
+      users,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      msg: "get all user",
+      error: error.message,
+    });
+  }
+};
+module.exports = { getAlluser, createUser };
