@@ -4,6 +4,7 @@ const {
   getAlluser,
   getsingleuser,
   updateUser,
+  deteteUser,
 } = require("../controllers/userctr");
 
 // routes  router object
@@ -21,5 +22,8 @@ router.get("/get-user/:id", getsingleuser);
 
 // update user
 router.put("/update-user/:id", updateUser);
+
+// delete user
+router.delete("/delete-user/:id", deteteUser);
 //export
 module.exports = router;
